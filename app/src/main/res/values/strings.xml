@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SBDeliveryJCTest</string>
+    <!--<string name="menu_dishes">Меню</string>
+    <string name="search_title">Поиск</string>
+    <string name="search_dishes_hint">Поиск блюд</string>
+    <string name="btn_retry_error">Повторить</string>
+    <string name="basket_title">Корзина</string>
+    <string name="dishes_title">Все блюда</string>
+    <string name="dish_title">Блюдо</string>-->
+
+<!-- https://developer.android.com/codelabs/jetpack-compose-state#0 -->
+    <string name="cd_crop_square" tools:ignore="ExtraTranslation">Crop</string>
+    <string name="cd_done">Done</string>
+    <string name="cd_event">Event</string>
+    <string name="cd_privacy">Privacy</string>
+    <string name="cd_restore">Restore</string>
+    <string name="cd_expand">Expand</string>
+    <string name="cd_collapse">Collapse</string>
+
+</resources>
