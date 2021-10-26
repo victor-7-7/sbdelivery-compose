@@ -48,8 +48,7 @@ fun DefaultToolbar(
     cartCount: Int = 0,
     canBack: Boolean = false,
     onCart: () -> Unit,
-    onDrawer: () -> Unit,
-    isStuff: Boolean = false
+    onDrawer: () -> Unit
 ) {
     val dispatcher = LocalOnBackPressedDispatcherOwner.current!!.onBackPressedDispatcher
 
@@ -86,7 +85,7 @@ fun DefaultToolbar(
 
         },
         actions = {
-            if (!isStuff) CartButton(cartCount = cartCount, onCart = onCart)
+            CartButton(cartCount = cartCount, onCart = onCart)
         }
     )
 }

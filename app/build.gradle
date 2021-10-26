@@ -48,6 +48,12 @@ android {
             option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
         }
     }
+    // https://google.github.io/android-gradle-dsl/3.2/com.android.build.gradle.internal.dsl.PackagingOptions.html
+    // https://github.com/Kotlin/kotlinx.coroutines/issues/2023
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+    }
 }
 
 dependencies {
