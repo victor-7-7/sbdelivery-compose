@@ -35,7 +35,7 @@ fun MenuItem(
         .aspectRatio(1f)
         .clickable { onClick(item) }
     ) {
-        Layout(
+       /* Layout(
             modifier = modifier.padding(bottom = 40.dp),
             content = {
                 val painter = rememberImagePainter(
@@ -73,9 +73,9 @@ fun MenuItem(
                     yPosition += placeable.height
                 }
             }
-        }
+        }*/
 
-        /*Column(
+        Column(
              verticalArrangement = Arrangement.SpaceAround,
              horizontalAlignment = Alignment.CenterHorizontally,
              modifier = modifier.padding(bottom = 16.dp)
@@ -101,7 +101,7 @@ fun MenuItem(
                  color = MaterialTheme.colors.secondary,
                  modifier = Modifier.fillMaxWidth()
              )
-         }*/
+         }
 
         /*ConstraintLayout {
             val (icon, text) = createRefs()
