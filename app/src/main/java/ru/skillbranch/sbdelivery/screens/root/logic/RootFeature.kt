@@ -165,7 +165,7 @@ class RootFeature(private val initState: RootState? = null) {
                 root.currentScrSt.homeState.reduce(msg.homeMsg, root)
 
             msg is Msg.Menu && root.currentScrSt is ScreenState.Menu ->
-                root.currentScrSt.menuState.reduce(msg.menuMsg, root)
+                root.currentScrSt.menuState.reduce(msg.msg, root)
 
             else -> root to emptySet()
         }
@@ -328,7 +328,7 @@ sealed class Msg {
     data class Dishes(val dishesMsg: DishesMsg) : Msg()
     data class Cart(val cartMsg: CartFeature.Msg) : Msg()
     data class Home(val homeMsg: HomeFeature.Msg) : Msg()
-    data class Menu(val menuMsg: MenuFeature.Msg) : Msg()
+    data class Menu(val msg: MenuFeature.Msg) : Msg()
 
     /** Рутовый мессидж (востребован на нескольких экранах) */
     data class Navigate(val navCmd: NavCmd) : Msg()
