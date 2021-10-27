@@ -7,7 +7,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 
 
-interface IEffHandler<E, M> {
+interface IEffectHandler<E, M> {
     var localJob : Job
     @ExperimentalCoroutinesApi
     suspend fun handle(effect: E, commit: (M) -> Unit)

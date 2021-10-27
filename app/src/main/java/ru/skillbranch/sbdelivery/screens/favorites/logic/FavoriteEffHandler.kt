@@ -10,7 +10,7 @@ import ru.skillbranch.sbdelivery.repository.DishesRepository
 import ru.skillbranch.sbdelivery.screens.dishes.logic.DishesMsg
 import ru.skillbranch.sbdelivery.screens.dishes.logic.toMsg
 import ru.skillbranch.sbdelivery.screens.root.logic.Eff
-import ru.skillbranch.sbdelivery.screens.root.logic.IEffHandler
+import ru.skillbranch.sbdelivery.screens.root.logic.IEffectHandler
 import ru.skillbranch.sbdelivery.screens.root.logic.Msg
 import javax.inject.Inject
 import kotlin.coroutines.coroutineContext
@@ -20,7 +20,7 @@ class FavoriteEffHandler @Inject constructor(
     private val dishesRepo: DishesRepository,
     private val notifyChanel: Channel<Eff.Notification>,
     override var localJob: Job
-) : IEffHandler<FavoriteFeature.Eff, Msg> {
+) : IEffectHandler<FavoriteFeature.Eff, Msg> {
 
     private val errHandler = CoroutineExceptionHandler{_, t ->
         t.printStackTrace()

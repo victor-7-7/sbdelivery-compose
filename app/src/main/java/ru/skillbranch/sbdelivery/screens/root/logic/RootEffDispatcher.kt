@@ -35,7 +35,7 @@ class EffDispatcher @Inject constructor(
     private val _cmdChanel: Channel<Command>,
     private val _notifyChanel: Channel<Eff.Notification>,
 
-    ) : IEffHandler<Eff, Msg> {
+    ) : IEffectHandler<Eff, Msg> {
     // fan-out => развёртываться как веер
     // receiveAsFlow -> Represents the given receive channel as a hot flow and
     // receives from the channel in fan-out fashion every time this flow is

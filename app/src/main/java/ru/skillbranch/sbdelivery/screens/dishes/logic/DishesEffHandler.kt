@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import ru.skillbranch.sbdelivery.repository.DishesRepository
 import ru.skillbranch.sbdelivery.screens.root.logic.Eff
-import ru.skillbranch.sbdelivery.screens.root.logic.IEffHandler
+import ru.skillbranch.sbdelivery.screens.root.logic.IEffectHandler
 import ru.skillbranch.sbdelivery.screens.root.logic.Msg
 import javax.inject.Inject
 import kotlin.coroutines.coroutineContext
@@ -16,7 +16,7 @@ class DishesEffHandler @Inject constructor(
     private val dishesRepo: DishesRepository,
     private val notifyChanel: Channel<Eff.Notification>,
     override var localJob: Job
-) : IEffHandler<DishesFeature.Eff, Msg> {
+) : IEffectHandler<DishesFeature.Eff, Msg> {
 
     private val errHandler = CoroutineExceptionHandler { _, t ->
         t.printStackTrace()
