@@ -50,7 +50,6 @@ class EffDispatcher @Inject constructor(
     //for android command
     val commands = _cmdChanel.receiveAsFlow()
 
-    @ExperimentalCoroutinesApi
     override suspend fun handle(effect: Eff, commit: (Msg) -> Unit) {
         Log.w("XXX", "EffDispatcher.handle() [EFFECT: $effect] | [COMMIT: $commit]")
         when (effect) {

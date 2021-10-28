@@ -6,13 +6,11 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.lifecycle.lifecycleScope
 import coil.annotation.ExperimentalCoilApi
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collect
 import ru.skillbranch.sbdelivery.screens.root.RootViewModel
@@ -22,11 +20,9 @@ import ru.skillbranch.sbdelivery.screens.root.ui.AppTheme
 import ru.skillbranch.sbdelivery.screens.root.ui.RootScreen
 
 
-@ExperimentalCoroutinesApi
 @ExperimentalCoilApi
 @ExperimentalFoundationApi
 @ExperimentalComposeUiApi
-@ExperimentalAnimationApi
 @FlowPreview
 @AndroidEntryPoint
 class RootActivity : AppCompatActivity() {

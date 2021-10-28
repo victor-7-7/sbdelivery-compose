@@ -23,7 +23,6 @@ class CartEffHandler @Inject constructor(
         t.message?.let { notifyChanel.trySend(Eff.Notification.Error(it)) }
     }
 
-    @ExperimentalCoroutinesApi
     override suspend fun handle(effect: CartFeature.Eff, commit: (Msg) -> Unit) {
         CoroutineScope(coroutineContext + localJob + errHandler).launch {
 

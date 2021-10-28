@@ -23,7 +23,6 @@ class DishesEffHandler @Inject constructor(
         t.message?.let { notifyChanel.trySend(Eff.Notification.Error(it)) }
     }
 
-    @ExperimentalCoroutinesApi
     override suspend fun handle(effect: DishesFeature.Eff,  commit: (Msg) -> Unit    ) {
 
         CoroutineScope(coroutineContext + localJob + errHandler).launch {

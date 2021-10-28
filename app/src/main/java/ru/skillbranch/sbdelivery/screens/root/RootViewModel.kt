@@ -5,14 +5,12 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import ru.skillbranch.sbdelivery.screens.root.logic.*
 import javax.inject.Inject
 
 
 @FlowPreview
-@ExperimentalCoroutinesApi
 @HiltViewModel
 class RootViewModel @Inject constructor(
     private val handle: SavedStateHandle,

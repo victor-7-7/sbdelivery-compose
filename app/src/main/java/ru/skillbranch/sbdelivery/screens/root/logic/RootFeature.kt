@@ -25,7 +25,6 @@ import java.io.Serializable
 
 
 @FlowPreview
-@ExperimentalCoroutinesApi
 class RootFeature(private val initState: RootState? = null) {
 
     // Функция вызывается только при запуске приложения в двух местах.
@@ -92,6 +91,7 @@ class RootFeature(private val initState: RootState? = null) {
      * ContentHost и AppbarHost). Затем каждый эффект из набора передается в диспетчер
      * эффектов для дальнейшей обработки. Вторым параметром в диспетчер передается (под
      * именем commit) ссылка на функцию mutate(msg) */
+    @OptIn(ExperimentalCoroutinesApi::class)
     fun listen(scope: CoroutineScope, effDispatcher: EffDispatcher, initState: RootState?) {
         Log.e("XXX", "RootFeature. Start listen. Init state: $initState")
         _scope = scope

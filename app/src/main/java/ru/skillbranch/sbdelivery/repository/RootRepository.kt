@@ -14,7 +14,6 @@ import ru.skillbranch.sbdelivery.data.toDishPersist
 import javax.inject.Inject
 
 interface IRootRepository {
-    @ExperimentalCoroutinesApi
     fun cartCount(): Flow<Int>
     suspend fun isEmptyDishes(): Boolean
     suspend fun syncDishes()
@@ -30,7 +29,7 @@ class RootRepository @Inject constructor(
     private val categoriesDao: CategoriesDao
 ) : IRootRepository {
 
-    @ExperimentalCoroutinesApi
+    @OptIn(ExperimentalCoroutinesApi::class)
     override fun cartCount() = cartDao.cartCountFlow()
         .flatMapLatest { flowOf(it ?: 0) }
         .distinctUntilChanged()

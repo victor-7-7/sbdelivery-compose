@@ -18,7 +18,6 @@ class MenuEffHandler @Inject constructor(
     override var localJob: Job
 ) : IEffectHandler<MenuFeature.Eff, Msg> {
 
-    @ExperimentalCoroutinesApi
     override suspend fun handle(effect: MenuFeature.Eff, commit: (Msg) -> Unit) {
 
         CoroutineScope(coroutineContext + localJob).launch {
