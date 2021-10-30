@@ -65,7 +65,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                     modifier = Modifier.fillMaxWidth(),
                     onClick = { onDismiss() },
                 ) {
-                    Text("Ok", color = MaterialTheme.colors.secondary)
+                    Text("Ок", color = MaterialTheme.colors.secondary)
                 }
             }
         }
